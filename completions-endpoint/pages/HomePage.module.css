@@ -1,0 +1,105 @@
+.pageWrapper {
+    background-color: white;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 3px;
+    text-align: center;
+    color: #777;
+    max-width: 50%;
+}
+
+.searchBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.queryInput {
+    width: 50%;
+    min-width: 400px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.askButton {
+    background-color: #4caf50;
+    color: white;
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px 20px;
+}
+
+.askButton:hover {
+    background-color: #45a049;
+}
+
+.dataSource {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.loading {
+    font-size: 14px;
+}
+
+.answerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.results {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.resultCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.sectionTitle {
+    font-size: 18px;
+}
+
+.answerBox {
+    border: 1px solid #ccc;
+    padding: 16px;
+    min-height: 100px;
+    width: 100%;
+    text-align: left;
+    word-wrap: break-word;
+}
