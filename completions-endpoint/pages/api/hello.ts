@@ -156,7 +156,7 @@ const composeMainPrompt = (parts: {ask:string, structure:string, conditions:stri
 }
 
 const makeFinishPrompt = (rawAnswer: string, originalQuestion: string) => {
-  return "explain the answer \"" +  rawAnswer + "\" to a human in the context of the following question: \"" + originalQuestion + "\". For purposes of this, assume the answer is correct."
+  return "state the answer \"" +  rawAnswer + "\" that may or may not be in JSON form to a human"
 }
 
 const formatCodePrompt = (code: string) =>{
