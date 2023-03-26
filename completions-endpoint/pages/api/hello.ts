@@ -9,7 +9,7 @@ const DATA = [
       {"name": "React", "rating": 5},
       {"name": "Node.js", "rating": 3}
     ],
-    "managerId": null
+    "managerId": -1
   },
   { "id": 1, "name": "Jane Doe", "age": 30, "skills": [
       {"name": "Python", "rating": 4},
