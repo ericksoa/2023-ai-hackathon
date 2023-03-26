@@ -3,7 +3,150 @@ import {Configuration, OpenAIApi} from "openai"
 import {getContributorData} from "@/pages/api/openSecrets";
 import {getLatestCovidData} from "@/pages/api/covid";
 
-const DATA = [{ name: "Aaron Erickson", age: 50, skills: [ "AI", "Being a smart ass"]}, { name: "Fred Flintstone", age: 47, skills: [ "AI", "Being a smart ass"]}]
+const DATA = [
+  { "id": 0, "name": "John Smith", "age": 35, "skills": [
+      {"name": "JavaScript", "rating": 4},
+      {"name": "React", "rating": 5},
+      {"name": "Node.js", "rating": 3}
+    ],
+    "managerId": null
+  },
+  { "id": 1, "name": "Jane Doe", "age": 30, "skills": [
+      {"name": "Python", "rating": 4},
+      {"name": "Django", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 0
+  },
+  { "id": 2, "name": "David Lee", "age": 28, "skills": [
+      {"name": "Python", "rating": 4},
+      {"name": "Flask", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 1
+  },
+  { "id": 3, "name": "Sophie Johnson", "age": 31, "skills": [
+      {"name": "JavaScript", "rating": 5},
+      {"name": "React", "rating": 4},
+      {"name": "Node.js", "rating": 3}
+    ],
+    "managerId": 1
+  },
+  { "id": 4, "name": "Ruby Smith", "age": 35, "skills": [
+      {"name": "Ruby", "rating": 4},
+      {"name": "Rails", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 2
+  },
+  { "id": 5, "name": "Mia Lee", "age": 27, "skills": [
+      {"name": "Java", "rating": 4},
+      {"name": "Spring", "rating": 5},
+      {"name": "MySQL", "rating": 3}
+    ],
+    "managerId": 2
+  },
+  { "id": 6, "name": "Owen Chen", "age": 29, "skills": [
+      {"name": "Python", "rating": 4},
+      {"name": "Django", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 3
+  },
+  { "id": 7, "name": "Hannah Johnson", "age": 32, "skills": [
+      {"name": "JavaScript", "rating": 5},
+      {"name": "React", "rating": 4},
+      {"name": "Node.js", "rating": 3}
+    ],
+    "managerId": 3
+  },
+  { "id": 8, "name": "Evelyn Kim", "age": 37, "skills": [
+      {"name": "Java", "rating": 4},
+      {"name": "Spring", "rating": 5},
+      {"name": "Oracle", "rating": 3}
+    ],
+    "managerId": 4
+  },
+  { "id": 9, "name": "Dylan Chen", "age": 30, "skills": [
+      {"name": "Python", "rating": 4},
+      {"name": "Django", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 4
+  },
+  { "id": 10, "name": "Olivia Davis", "age": 34, "skills": [
+      {"name": "JavaScript", "rating": 5},
+      {"name": "Angular", "rating": 4},
+      {"name": "Node.js", "rating": 3}
+    ],
+    "managerId": 5
+  },
+  { "id": 11, "name": "William Kim", "age": 27, "skills": [
+      {"name": "Java", "rating": 4},
+      {"name": "Spring Boot", "rating": 5},
+      {"name": "MongoDB", "rating": 3}
+    ],
+    "managerId": 5
+  },
+  { "id": 12, "name": "Ella Lee", "age": 28, "skills": [
+      {"name": "Python", "rating": 4},
+      {"name": "Flask", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 6
+  },
+  { "id": 13, "name": "Samuel Johnson", "age": 31, "skills": [
+      {"name": "JavaScript", "rating": 5},
+      {"name": "React", "rating": 4},
+      {"name": "Node.js", "rating": 3}
+    ],
+    "managerId": 6
+  },
+  { "id": 14, "name": "Nora Kim", "age": 35, "skills": [
+      {"name": "Ruby", "rating": 4},
+      {"name": "Rails", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 7
+  },
+  { "id": 15, "name": "Jacob Lee", "age": 27, "skills": [
+      {"name": "Java", "rating": 4},
+      {"name": "Spring", "rating": 5},
+      {"name": "MySQL", "rating": 3}
+    ],
+    "managerId": 7
+  },
+  { "id": 16, "name": "Lila Chen", "age": 29, "skills": [
+      {"name": "Python", "rating": 4},
+      {"name": "Django", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 8
+  },
+  { "id": 17, "name": "Daniel Johnson", "age": 32, "skills": [
+      {"name": "JavaScript", "rating": 5},
+      {"name": "React", "rating": 4},
+      {"name": "Node.js", "rating": 3}
+    ],
+    "managerId": 8
+  },
+  { "id": 18, "name": "Aiden Kim", "age": 37, "skills": [
+      {"name": "Java", "rating": 4},
+      {"name": "Spring", "rating": 5},
+      {"name": "Oracle", "rating": 3}
+    ],
+    "managerId": 9
+  },
+  { "id": 19, "name": "Lila Davis", "age": 30, "skills": [
+      {"name": "Python", "rating": 4},
+      {"name": "Django", "rating": 5},
+      {"name": "PostgreSQL", "rating": 3}
+    ],
+    "managerId": 9
+  }
+];
+
+
 type JSONValue = string | number | boolean | null | JSONObject | JSONArray;
 type JSONObject = { [key: string]: JSONValue };
 type JSONArray = JSONValue[];
